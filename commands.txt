@@ -1,0 +1,32 @@
+
+John Lennon - 4
+curl -X GET http://localhost:8080/api/employee/16a596ae-edd3-4847-99fe-c4518e82c86f
+curl -X GET http://localhost:8080/api/employee/reporting-structure/16a596ae-edd3-4847-99fe-c4518e82c86f
+curl -H "Content-Type: application/json" -X POST -d "{'employee' : {'EmployeeId':'16a596ae-edd3-4847-99fe-c4518e82c86f'}, 'salary':'10'}" http://localhost:8080/api/employee/compensation
+curl -X GET http://localhost:8080/api/employee/compensation/16a596ae-edd3-4847-99fe-c4518e82c86f
+
+Paul McCartney - 0
+curl -X GET http://localhost:8080/api/employee/b7839309-3348-463b-a7e3-5de1c168beb3
+curl -X GET http://localhost:8080/api/employee/reporting-structure/b7839309-3348-463b-a7e3-5de1c168beb3
+
+Ringo Starr - 2
+curl -X GET http://localhost:8080/api/employee/03aa1462-ffa9-4978-901b-7c001562cf6f
+curl -X GET http://localhost:8080/api/employee/reporting-structure/03aa1462-ffa9-4978-901b-7c001562cf6f
+
+Pete Best - 0
+curl -X GET http://localhost:8080/api/employee/62c1084e-6e34-4630-93fd-9153afb65309
+curl -X GET http://localhost:8080/api/employee/reporting-structure/62c1084e-6e34-4630-93fd-9153afb65309
+
+George Harrison - 0
+curl -X GET http://localhost:8080/api/employee/c0c2293d-16bd-4603-8e08-638a9d18b22c
+curl -X GET http://localhost:8080/api/employee/reporting-structure/c0c2293d-16bd-4603-8e08-638a9d18b22c
+
+Create New:  
+curl -H "Content-Type: application/json" -X POST -d "{'firstName':'Jeremy','lastName':'McGrath','position':'Developer','department':'Engineering'}" http://localhost:8080/api/employee
+
+Create New Compensation:  
+curl -H "Content-Type: application/json" -X POST -d "{'employee' : {'firstName':'Jeremy','lastName':'McGrath','position':'Developer','department':'Engineering'}, 'salary':'1000'}" http://localhost:8080/api/employee/compensation
+
+REPORTING STRUCTURE:
+curl -X GET http://localhost:8080/api/employee/reporting-structure/16a596ae-edd3-4847-99fe-c4518e82c86f
+
